@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/departments")
+//@RequestMapping("/departments")
 @Slf4j
 public class DepartmentController {
 
@@ -17,7 +17,7 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     @PostMapping("/")
-    public Department saveDepartment(Department department){
+    public Department saveDepartment(@RequestBody Department department){
     //    log.info("Insdie the Department method of department controller");
 
         return departmentService.saveDepartment(department);
