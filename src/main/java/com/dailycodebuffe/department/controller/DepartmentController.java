@@ -2,19 +2,18 @@ package com.dailycodebuffe.department.controller;
 
 import com.dailycodebuffe.department.entity.Department;
 import com.dailycodebuffe.department.service.DepartmentService;
+import com.dailycodebuffe.department.service.DepartmentServiceimpl;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-//@RequestMapping("/departments")
-@Slf4j
+@RequestMapping("/departments")
 public class DepartmentController {
 
     @Autowired
-    private DepartmentService departmentService;
+    private DepartmentService departmentService;;
 
     @PostMapping("/")
     public Department saveDepartment(@RequestBody Department department){
